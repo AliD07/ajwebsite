@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Academic Quest Explorer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #00B4D8, #90E0EF);
+      overflow: hidden;
+      text-align: center;
+      color: #03045E;
+    }
+
+    .background-sparkles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-1000px) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    header {
+      margin-top: 5em;
+      z-index: 1;
+      position: relative;
+    }
+
+    header img {
+      width: 700px;
+      animation: glow 3s infinite ease-in-out alternate;
+    }
+
+    @keyframes glow {
+      from {
+        filter: drop-shadow(0 0 5px #0077B6);
+      }
+      to {
+        filter: drop-shadow(0 0 15px #48CAE4);
+      }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5em;
+      margin: 0.5em 0 0.3em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 2em;
+      color: #0077B6;
+    }
+
+    .explore-button {
+      padding: 15px 70px;
+      font-size: 1.2em;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: bold;
+      border: none;
+      background-color: #03045E;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.4s;
+    }
+
+    .explore-button:hover {
+      background-color: #0077B6;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+  
+  
+  <div class="background-sparkles">
+    <div class="sparkle" style="top: 90%; left: 20%; animation-delay: 0s;"></div>
+    <div class="sparkle" style="top: 100%; left: 45%; animation-delay: 1s;"></div>
+    <div class="sparkle" style="top: 95%; left: 70%; animation-delay: 2.5s;"></div>
+    <div class="sparkle" style="top: 92%; left: 10%; animation-delay: 3s;"></div>
+    <div class="sparkle" style="top: 100%; left: 80%; animation-delay: 4s;"></div>
+  </div>
+
+  <header>
+    <img src="logo.png" alt="My Academic Quest Explorer Logo" />
+    <h1>"MY ACADEMIC QUEST EXPLORER"</h1>
+    <h2><em>Unlock the secrets to academic success - are you in?</em></h2>
+    <button class="explore-button" onclick="explore()">✨ Let's Explore More</button>
+  </header>
+
+  <script>
+    function explore() {
+      window.location.href = "explore.html";
+    }
+  </script>
+
+</body>
+</html>
